@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const currentUserStr = localStorage.getItem("currentUser");
     if (!currentUserStr) {
-        window.location.href = "tela-login.html";
+        window.location.href = "login.html";
         return;
     }
 
@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btn-sair").addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("currentUser");
-        window.location.href = "tela-login.html";
+        window.location.href = "login.html";
     });
 });
