@@ -7,8 +7,13 @@
 
 body {
     background-color: #f4f7f6;
-    min-height: 100vh;
+    color: #000;
 
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
 }
 
 .topbar {
@@ -125,6 +130,13 @@ body {
 }
 
 .form-group select:hover {
+    border-color: #0000cd;
+    
+
+}
+
+.form-group select:focus {
+    outline: none;
     border-color: #0000cd;
     box-shadow: 0 0 0 2px rgba(0,0,205,0.1);
 
