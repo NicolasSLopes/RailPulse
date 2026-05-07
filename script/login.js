@@ -27,7 +27,7 @@ document.getElementById("form").onsubmit = (e) => {
     let usuariosDb = JSON.parse(localStorage.getItem("usuarios_cadastrados")) || {};
     let salva = localStorage.getItem(email);
 
-    let loginmestre = (email === "admin@admin.com" && senha === "1234");
+    let loginmestre = (email === "admin@gmail.com" && senha === "1234");
     let loginusuario = false;
     let nomeUsuario = "User";
 
