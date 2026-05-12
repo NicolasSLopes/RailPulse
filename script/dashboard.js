@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuUsuarios = document.getElementById("menu-usuarios");
     const infoMatricula = document.getElementById("info-matricula");
 
-    if (infoMatricula && currentUser.matricula) {
-        infoMatricula.textContent = 'Matrícula' + currentUser.matricula;
+    if (infoMatricula && currentUser) {
+    infoMatricula.textContent =
+        "Matrícula: " + currentUser.matricula +
+        " | Função: " + currentUser.role
     }
 
     if (currentUser.role === "admin") {
