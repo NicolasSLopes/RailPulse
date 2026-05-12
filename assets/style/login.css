@@ -4,8 +4,6 @@
     --cor-detalhe: #1a2d4b;
     --cor-erro: #d9534f;
     --cor-sucesso: #5cb85c;
-
-
 }
 
 * {
@@ -13,7 +11,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-
 }
 
 body {
@@ -23,16 +20,12 @@ body {
     min-height: 100vh;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
-
 }
 
 main {
     width: 100%;
     max-width: 320px;
     padding: 20px;
-
-
-
 }
 
 h2 {
@@ -40,20 +33,17 @@ h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 600;
-
 }
 
 #form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
 
 .conjunto {
     display: flex;
     flex-direction: column;
-
 }
 
 label {
@@ -61,7 +51,6 @@ label {
     margin-bottom: 5px;
     text-transform: uppercase;
     color: #777;
-
 }
 
 input {
@@ -72,8 +61,6 @@ input {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
-
-    
 }
 
 input:focus {
@@ -89,14 +76,12 @@ button {
     font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s;
-
 }
 
 button:hover {
     background-color: transparent;
     color: var(--cor-detalhe);
-
-} 
+}
 
 .toggle {
     margin-top: 20px;
@@ -104,15 +89,18 @@ button:hover {
     font-size: 0.85rem;
     cursor: pointer;
     color: #555;
-
 }
 
 .toggle:hover {
     text-decoration: underline;
 }
 
+.erro {
+    color: var(--cor-erro);
+    text-align: center;
+}
 
-
-
-.erro {color: var(--cor-erro); text-align: center;}
-.sucesso{color: var(--cor-sucesso); text-align: center;}
+.sucesso {
+    color: var(--cor-sucesso);
+    text-align: center;
+}
