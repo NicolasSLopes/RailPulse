@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,6 @@
 body {
     background-color: #f4f7f6;
     color: #000;
-
 }
 
 .app-container {
@@ -26,27 +25,41 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 0 30px;
+}
 
+.topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topbar-matricula {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+    background-color: #e9ecef;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.topbar-matricula:empty {
+    display: none;
 }
 
 .topbar a {
     text-decoration: none;
     color: #666;
     font-weight: 600;
-
-
 }
 
 .topbar a:hover {
     color: #000;
-
 }
 
 .sidebar {
     width: 250px;
     background-color: #fff;
     border-right: 1px solid #ddd;
-
 }
 
 .sidebar .menu-title {
@@ -54,17 +67,14 @@ body {
     color: #888;
     font-weight: bold;
     padding: 20px;
-
 }
 
 .sidebar ul {
     list-style: none;
-
 }
 
 .sidebar li {
     border-bottom: 1px solid #f0f0f0;
-
 }
 
 .sidebar a {
@@ -73,13 +83,15 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 700;
+}
 
+.sidebar a:hover {
+    background-color: #f5f5f5;
 }
 
 .sidebar a.active {
     background-color: #000;
     color: #fff;
-
 }
 
 .main-content {
@@ -90,25 +102,27 @@ body {
 .page-title {
     font-size: 1.8rem;
     margin-bottom: 15px;
+}
 
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-bottom: 15px;
 }
 
 .section-title.light {
     border-bottom: 1px solid #999;
     margin: 20px 0;
-
 }
 
 .form-group {
-    margin-bottom: 15 px;
+    margin-bottom: 15px;
     position: relative;
-
 }
 
 .form-group label {
     font-size: 0.7rem;
     font-weight: bold;
-
 }
 
 .form-group input,
@@ -120,39 +134,38 @@ body {
     background-color: #fff;
 }
 
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #0000cd;
+    box-shadow: 0 0 0 2px rgba(0, 0, 205, 0.1);
+}
+
 .form-group select {
     appearance: none;
     cursor: pointer;
     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20'><path d='M7 10l5 5 5-5z'/></svg>");
     background-repeat: no-repeat;
     background-position: right 10px center;
-
 }
 
 .form-group select:hover {
     border-color: #0000cd;
-    
-
-}
-
-.form-group select:focus {
-    outline: none;
-    border-color: #0000cd;
-    box-shadow: 0 0 0 2px rgba(0,0,205,0.1);
-
 }
 
 .form-row {
     display: flex;
     gap: 20px;
+}
 
+.form-row .form-group {
+    flex: 1;
 }
 
 .buttons-row {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-
 }
 
 .btn {
@@ -160,16 +173,37 @@ body {
     font-weight: bold;
     cursor: pointer;
     border: none;
+    transition: opacity 0.2s;
+}
 
+.btn:hover {
+    opacity: 0.85;
 }
 
 .btn-primary {
-    background-color:  #0000cd;
-    color:  #fff ;
-
+    background-color: #0000cd;
+    color: #fff;
 }
 
 .btn-secondary {
     background-color: #fff;
     border: 1px solid #000;
+}
+
+.msg-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.msg-erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 600;
 }

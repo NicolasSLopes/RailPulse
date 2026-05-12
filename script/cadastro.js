@@ -12,25 +12,33 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    const infoMatricula = document.getElementById("info-matricula");
+    if (infoMatricula && currentUser.matricula) {
+        infoMatricula.textContent = "Matrícula: " + currentUser.matricula;
+    }
+
     document.getElementById("btn-sair").addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("currentUser");
-        window.location.href = "login.html"
+        window.location.href = "login.html";
     });
 
     document.getElementById("form-cadastro").addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const nome = document.getElementById("cad-nome").value;
-        const matricula = document.getElementById("cad-matricula").value;
-        const email = document.getElementById("cad-email").value;
+        const nome = document.getElementById("cad-nome").value.trim();
+        const matricula = document.getElementById("cad-matricula").value.trim();
+        const email = document.getElementById("cad-email").value.trim();
         const senha = document.getElementById("cad-senha").value;
-
-
         const cargo = document.getElementById("cad-cargo").value;
 
         if (!cargo) {
             alert("Selecione um cargo!");
+            return;
+        }
+
+        if (!nome || !matricula || !email || !senha) {
+            alert("Preencha todos os campos!");
             return;
         }
 
@@ -53,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("form-cadastro").reset();
 
         const container = document.getElementById("mensagem-container");
-        container.innerHTML = `<div style="background-color: #d4edda; color: #155724; padding: 10px; margin: 10px 0; border-radius: 4px;">Usuário cadastrado com sucesso!</div>`;
+        container.innerHTML = `<div class="msg-sucesso">Usuário cadastrado com sucesso!</div>`;
 
         setTimeout(() => {
             container.innerHTML = "";

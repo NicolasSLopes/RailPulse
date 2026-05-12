@@ -1,7 +1,7 @@
 document.getElementById("form").onsubmit = (e) => {
     e.preventDefault();
 
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("email").value.trim();
     let senha = document.getElementById("senha").value;
     let mensagem = document.getElementById("mensagem");
 
@@ -15,38 +15,49 @@ document.getElementById("form").onsubmit = (e) => {
     mensagem.innerHTML = "";
 
     if (!email.includes("@") || !email.includes(".")) {
-        mensagem.innerHTML = "<div class='error'><p>Email inválido.</p></div>";
+        mensagem.innerHTML = "<div class='erro'><p>Email inválido.</p></div>";
         return;
     }
 
     if (senha.length < 4) {
-        mensagem.innerHTML = "<div class='error'><p>Senha muito curta.</p></div>";
+        mensagem.innerHTML = "<div class='erro'><p>Senha muito curta.</p></div>";
         return;
     }
 
     let usuariosDb = JSON.parse(localStorage.getItem("usuarios_cadastrados")) || {};
-    let salva = localStorage.getItem(email);
 
     let loginmestre = (email === "admin@gmail.com" && senha === "1234");
     let loginusuario = false;
     let nomeUsuario = "User";
+    let roleUsuario = "funcionario";
+    let matriculaUsuario = "";
 
     if (usuariosDb[email] && usuariosDb[email].senha === senha) {
         loginusuario = true;
         nomeUsuario = usuariosDb[email].nome || "User";
-    } else if (salva !== null && salva === senha) {
-        loginusuario = true;
+        roleUsuario = usuariosDb[email].role || "funcionario";
+        matriculaUsuario = usuariosDb[email].matricula || "";
     }
 
     if (loginmestre) {
-        localStorage.setItem("currentUser", JSON.stringify({ role: "admin", nome: "administrador", email: email}));
-        mensagem.innerHTML = "<div class= 'sucesso'><p>Login com sucesso</p></div>";
+        localStorage.setItem("currentUser", JSON.stringify({
+            role: "admin",
+            nome: "Administrador",
+            email: email,
+            matricula: "0001"
+        }));
+        mensagem.innerHTML = "<div class='sucesso'><p>Login com sucesso</p></div>";
         setTimeout(() => window.location.href = "dashboard.html", 500);
     } else if (loginusuario) {
-        localStorage.setItem("currentUser", JSON.stringify({ role: "funcionario", nome: nomeUsuario, email: email}));
-        mensagem.innerHTML = "<div class= 'sucesso'><p>Login com sucesso</p></div>";
+        localStorage.setItem("currentUser", JSON.stringify({
+            role: roleUsuario,
+            nome: nomeUsuario,
+            email: email,
+            matricula: matriculaUsuario
+        }));
+        mensagem.innerHTML = "<div class='sucesso'><p>Login com sucesso</p></div>";
         setTimeout(() => window.location.href = "dashboard.html", 500);
     } else {
-        mensagem.innerHTML = "<div class='error'><p>Dados incorretos.</p></div>";
-}
+        mensagem.innerHTML = "<div class='erro'><p>Dados incorretos.</p></div>";
+    }
 }

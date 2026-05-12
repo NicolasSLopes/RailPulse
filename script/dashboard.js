@@ -9,13 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const boasVindas = document.getElementById("boas-vindas");
     const menuUsuarios = document.getElementById("menu-usuarios");
+    const infoMatricula = document.getElementById("info-matricula");
+
+    if (infoMatricula && currentUser.matricula) {
+        infoMatricula.textContent = 'Matrícula' + currentUser.matricula;
+    }
 
     if (currentUser.role === "admin") {
         boasVindas.innerText = "Bem-vindo, Administrador";
-        menuUsuarios.style.display = "block";
+        if (menuUsuarios) {
+            menuUsuarios.style.display = "block";
+        }
     } else {
         boasVindas.innerText = "Bem-vindo, " + (currentUser.nome || "User");
-
     }
 
     document.getElementById("btn-sair").addEventListener("click", (e) => {
