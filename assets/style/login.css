@@ -25,7 +25,7 @@ body {
 
 main {
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
     padding: 20px;
 }
 
@@ -115,3 +115,11 @@ button:hover {
 }
 
 .logo span { color: #0000cd; }
+
+.e-form{
+    background-color: #ffffff; /* Fundo branco para destacar */
+    padding: 30px;             /* Espaço interno para o form não grudar na borda */
+    border-radius: 8px;        /* Bordas levemente arredondadas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #eee;
+}
