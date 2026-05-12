@@ -1,0 +1,153 @@
+* {
+    font-family: 'inter', arial, sans-serif ;
+}
+
+.corpo-inicial {
+    background-color: #f4f7f6;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navegacao {
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-menu {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.logo span { color: #0000cd; }
+
+.link-entrar {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-right: 20px;
+}
+
+.botao-destaque {
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.banner {
+    background: #fff;
+    padding: 100px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.etiqueta {
+    color: #0000cd;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.texto-apoio {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.botao-azul {
+    background-color: #0000cd;
+    color: #fff;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.recursos { padding: 80px 0; }
+
+.grade-recursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cartao {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #eee;
+}
+
+.numero {
+    color: #0000cd;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cartao h3 {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cartao p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.rodape {
+    background: #fff;
+    padding: 60px 0;
+    border-top: 1px solid #ddd;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.conteudo-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.equipe { font-weight: bold; color: #333; }
+
+@media (max-width: 900px) {
+    .grade-recursos { grid-template-columns: 1fr; }
+    .titulo-principal { font-size: 2.5rem; }
+    .conteudo-rodape { flex-direction: column; text-align: center; gap: 20px; }
+}
