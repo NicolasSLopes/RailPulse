@@ -13,8 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const infoMatricula = document.getElementById("info-matricula");
-    if (infoMatricula && currentUser.matricula) {
-        infoMatricula.textContent = "Matrícula: " + currentUser.matricula;
+    if (infoMatricula && currentUser) {
+    infoMatricula.textContent =
+        "Matrícula: " + currentUser.matricula +
+        " | Função: " + currentUser.role
     }
 
     document.getElementById("btn-sair").addEventListener("click", (e) => {
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         usuariosDb[email] = {
             nome: nome,
             matricula: matricula,
+            email: email,
             role: cargo,
             senha: senha
         };
