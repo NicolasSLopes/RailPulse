@@ -12,23 +12,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const infoMatricula = document.getElementById("info-matricula");
 
     if (infoMatricula && currentUser) {
-    infoMatricula.textContent =
-        "Matrícula: " + currentUser.matricula +
-        " | Função: " + currentUser.role
+        infoMatricula.textContent =
+            "Matrícula: " + currentUser.matricula +
+            " | Função: " + currentUser.role
     }
 
     if (currentUser.role === "admin") {
         boasVindas.innerText = "Bem-vindo, Administrador";
         if (menuUsuarios) {
-            menuUsuarios.style.display = "block";
+            menuUsuarios.style.display = "flex";
         }
     } else {
         boasVindas.innerText = "Bem-vindo, " + (currentUser.nome || "User");
+        if (menuUsuarios) {
+            menuUsuarios.style.display = "none";
+        }
     }
 
-    document.getElementById("btn-sair").addEventListener("click", (e) => {
-        e.preventDefault();
-        localStorage.removeItem("currentUser");
-        window.location.href = "login.html";
-    });
+    const btnSair = document.getElementById("btn-sair");
+    if (btnSair) {
+        btnSair.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("currentUser");
+            window.location.href = "login.html";
+        });
+    }
 });

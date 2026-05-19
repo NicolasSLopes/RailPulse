@@ -52,7 +52,7 @@ if (btnSair) {
 
         localStorage.removeItem("currentUser");
 
-        window.location.href = "../index.html";
+        window.location.href = "login.html";
 
     });
 
