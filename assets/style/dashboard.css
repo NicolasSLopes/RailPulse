@@ -141,7 +141,7 @@ body {
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #0000cd;
+    border-color:  rgb(45, 151, 212);
     box-shadow: 0 0 0 2px rgba(0, 0, 205, 0.1);
 }
 
@@ -154,7 +154,7 @@ body {
 }
 
 .form-group select:hover {
-    border-color: #0000cd;
+    border-color: rgb(45, 151, 212);
 }
 
 .form-row {
@@ -185,7 +185,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #0000cd;
+    background-color: rgb(45, 151, 212);
     color: #fff;
 }
 
@@ -219,7 +219,7 @@ body {
     white-space: nowrap;
 }
 
-.logo span { color: #0000cd; }
+.logo span { color: rgb(45, 151, 212); }
 
 
 .container-menu {
@@ -258,15 +258,15 @@ body {
 }
 
 .paginas a.active {
-    color: #0000cd;
+    color: rgb(45, 151, 212);
     background-color: #f0f4ff;
-    border-bottom: 3px solid #0000cd;
+    border-bottom: 3px solid rgb(45, 151, 212);
     position: relative;
 }
 
 .paginas:hover {
     background-color: #f5f5f5;
-    color: #0000cd;
+    color: rgb(45, 151, 212);
 }
 
 .paginas.active {
