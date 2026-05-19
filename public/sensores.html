@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/style/dashboard.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="topbar">
-            <a href="#" id="btn-sair">SAIR</a>
-        </header>
+    <nav class="navegacao">
+            <div class="container-menu">
+                <div class="logo">Rail<span>Pulse</span></div>
+                <div class="paginas"><a href="../public/dashboard.html" >PAINEL</a></div>
+                <div class="paginas"><a href="../public/sensores.html" class="active">SENSORES</a></div>
+                <div class="paginas"><a href="../public/trens.html">TRENS</a></div>
+                <div class="paginas"><a href="../public/rotas.html">ROTAS</a></div>
+                <div class="paginas"><a href="../public/relatorios.html">RELATÓRIOS</a></div>
+                <div class="paginas"><a href="../public/usuarios.html" >USUÁRIOS</a></div>
+                <div class="topbar-info">
+                    <span id="info-matricula" class="topbar-matricula"></span>
+                    <a href="../index.html" class="paginas">SAIR</a>
+                </div>
+
+            </div>
+        </nav>
 </body>
 </html>
