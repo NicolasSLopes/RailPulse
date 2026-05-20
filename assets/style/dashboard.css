@@ -386,3 +386,167 @@ body {
 #tabela-sensores tbody tr:hover {
     background-color: #f7f9ff;
 }
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+}
+
+.badge-ativo {
+    background: #0000cd;
+    color: #fff;
+}
+
+.badge-espera {
+    background: e0e0e0;
+    color: #333;
+    border: 1px solid #bbb;
+}
+
+.badge-falha {
+    background: #cc2222;
+    color: #fff;
+}
+
+.acao-link {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 10px;
+    letter-spacing: .04em;
+}
+
+.acao-link.editar {
+    color: #0000cd;
+}
+
+.acao-link.excluir {
+    color: #cc2222;
+}
+
+.acao-link:hover {
+    text-decoration: underline;
+}
+
+.aviso-info {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    color: #856404;
+    letter-spacing: .03em;
+}
+
+.msg-vazio {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+#msg-sensor {
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+
+.msg-ok {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+.msg-err {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+#section-cadastro {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px 36px;
+    width: 680px;
+    max-width: 95vw;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .18);
+}
+
+
+.modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: .06em;
+    border-bottom: 2px solid #0000cd;
+    padding-bottom: 8px;
+    color: #0000cd;
+}
+
+.topbar-user {
+    font-size: 0.8rem;
+    color: #888;
+    margin-right: 18px;
+}
+
+
+
+.form-group {
+    margin-bottom: 14px;
+    flex: 1;
+}
+
+
+.form-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: .04em;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    font-size: 0.88rem;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: border-color .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #0000cd;
+    box-shadow: 0 0 0 2px rgba(0, 0, 205, .1);
+}
