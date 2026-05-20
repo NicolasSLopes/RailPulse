@@ -35,7 +35,7 @@
 
         <main class="main-content">
             <h2 class="page-title" id="boas-vindas">Bem-vindo</h2>
-            <hr class="divider">
+            <hr class="divider"><br>
 
             <div class="section-title light" style="margin-top: 0;">RASTREAMENTO DE LOCALIZAÇÃO</div>
         </main>
