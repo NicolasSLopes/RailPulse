@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     const currentUserStr = localStorage.getItem("currentUser");
     if (!currentUserStr) {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
         return;
     }
 
     const currentUser = JSON.parse(currentUserStr);
     if (currentUser.role !== "admin") {
         alert("Acesso negado: Apenas administradores podem acessar esta página.");
-        window.location.href = "dashboard.html";
+        window.location.href = "dashboard.php";
         return;
     }
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnSair.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.removeItem("currentUser");
-            window.location.href = "login.html";
+            window.location.href = "login.php";
         });
     }
 

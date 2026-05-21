@@ -56,7 +56,7 @@ document.getElementById("form").onsubmit = (e) => {
             matricula: matriculaUsuario
         }));
         mensagem.innerHTML = "<div class='sucesso'><p>Login com sucesso</p></div>";
-        setTimeout(() => window.location.href = "dashboard.html", 500);
+        setTimeout(() => window.location.href = "dashboard.php", 500);
     } else {
         mensagem.innerHTML = "<div class='erro'><p>Dados incorretos.</p></div>";
     }

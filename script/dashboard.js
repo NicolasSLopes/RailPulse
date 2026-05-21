@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const currentUserStr = localStorage.getItem("currentUser");
     if (!currentUserStr) {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
         return;
     }
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnSair.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.removeItem("currentUser");
-            window.location.href = "login.html";
+            window.location.href = "login.php";
         });
     }
 });

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const currentUserStr = localStorage.getItem("currentUser");
     if (!currentUserStr) {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
         return;
     }
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
         e.preventDefault();
         localStorage.removeItem("currentUser");
-        window.location.href = "index.html";
+        window.location.href = "index.php";
     });
 
     const sectionCadastro = document.getElementById("section-cadastro");
