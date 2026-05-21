@@ -6,16 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const currentUser = JSON.parse(currentUserStr);
+    const menuUsuarios = document.getElementById("menu-usuarios");
+    const infoMatricula = document.getElementById("info-matricula");
     const isAdmin = currentUser.role === "admin";
 
-    const topbarUser = document.getElementById("topbar-user");
-    if (topbarUser) topbarUser.textContent = currentUser.nome || currentUser.email || "";
+    if (menuUsuarios) {
+        menuUsuarios.style.display = isAdmin ? "flex" : "none";
+    }
 
-    const menuUsuarios = document.getElementById("menu-usuarios");
-    if (menuUsuarios) menuUsuarios.style.display = isAdmin ? "block" : "none";
+    if (infoMatricula && currentUser) {
+        infoMatricula.textContent =
+            "Matrícula: " + currentUser.matricula +
+            " | Função: " + currentUser.role
+    }
 
-    document.getElementById("btn-sair").addEventListener("click", (e) => 
-    {
+    document.getElementById("btn-sair").addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("currentUser");
         window.location.href = "index.php";
@@ -28,19 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const msgSensor = document.getElementById("btn-novo-sensor");
     const tbodySensores = document.getElementById("tbody-sensores");
     const colAcoes = document.getElementById("col-acoes");
-    const avisoHistorico   = document.getElementById("aviso-historico");
+    const avisoHistorico = document.getElementById("aviso-historico");
     const msgVazio = document.getElementById("msg-vazio");
-    const modalEditar = cosument.getElementById("modal-editar");
+    const modalEditar = document.getElementById("modal-editar");
     const btnFecharModal = document.getElementById("btn-fechar-modal");
 
-    if(isAdmin) {
+    if (isAdmin) {
         btnNovoSensor.style.display = "inline-block";
-        colAcoes.style.display = "table-call";
+        colAcoes.style.display = "table-cell";
     }
 
     const STORAGE_KEY = "sensores_cadastrados";
 
-     function salvarSensores(lista) {
+    function salvarSensores(lista) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(lista));
     }
 
@@ -48,14 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const map = {
             "Ativo": "badge-ativo",
             "Em Espera": "badge-espera",
-            "Falha":     "badge-falha",
+            "Falha": "badge-falha",
         };
         const cls = map[status] || "badge-espera";
         return `<span class="badge ${cls}">${status.toUpperCase()}</span>`;
     }
 
     function renderizar(lista) {
-        tbodySensores.innerHTML ="";
+        tbodySensores.innerHTML = "";
 
         if (lista.length === 0) {
             msgVazio.style.display = "block";
@@ -85,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tbodySensores.querySelectorAll(".acao-link.editar").forEach(link => {
                 link.addEventListener("click", (e) => {
                     e.preventDefault();
-                    abrirModalEditar(Number(link.CDATA_SECTION_NODE.idx));
+                    abrirModalEditar(Number(link.dataset.idx));                
                 });
             });
 
@@ -104,32 +109,32 @@ document.addEventListener("DOMContentLoaded", () => {
         formSensor.reset();
         msgSensor.innerHTML = "";
         btnNovoSensor.style.display = "none";
-        sectionCadastro.scrollIntoView({ behavior: "smooth"});
+        sectionCadastro.scrollIntoView({ behavior: "smooth" });
     });
 
     btnCancelar.addEventListener("click", () => {
         sectionCadastro.style.display = "none";
-        btnNovoSensor.style.display   = "inline-block";
-        msgSensor.innerHTML           = "";
+        btnNovoSensor.style.display = "inline-block";
+        msgSensor.innerHTML = "";
     });
 
     formSensor.addEventListener("submit", (e) => {
         e.preventDefault();
 
 
-        const id          = document.getElementById("snr-id").value.trim().toUpperCase();
-        const nome        = document.getElementById("snr-nome").value.trim();
-        const tipo        = document.getElementById("snr-tipo").value;
+        const id = document.getElementById("snr-id").value.trim().toUpperCase();
+        const nome = document.getElementById("snr-nome").value.trim();
+        const tipo = document.getElementById("snr-tipo").value;
         const localizacao = document.getElementById("snr-localizacao").value.trim();
-        const status      = document.getElementById("snr-status").value;
-        const descricao   = document.getElementById("snr-descricao").value.trim();
+        const status = document.getElementById("snr-status").value;
+        const descricao = document.getElementById("snr-descricao").value.trim();
 
         if (!id || !nome || !tipo || !localizacao) {
             mostrarMsg(msgSensor, `Já existe um sensor com o ID "${id}".`, "err");
             return;
         }
 
-        lista.push({ id, nome, tipo, localizacao, status, descricao});
+        lista.push({ id, nome, tipo, localizacao, status, descricao });
         salvarSensores(lista);
         renderizar(lista);
 
@@ -138,8 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             sectionCadastro.style.display = "none";
-            btnNovoSensor.style.display   = "inline-block";
-            msgSensor.innerHTML           = "";
+            btnNovoSensor.style.display = "inline-block";
+            msgSensor.innerHTML = "";
         }, 2200);
 
     });
@@ -155,8 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-         if(!confirm(`Deseja excluir o sensor "${sensor.nome}" (${sensor.id})?`)) 
-        return;
+        if (!confirm(`Deseja excluir o sensor "${sensor.nome}" (${sensor.id})?`))
+            return;
 
         lista.splice(idx, 1);
         salvarSensores(lista);
@@ -164,6 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-   
+
 
 });
