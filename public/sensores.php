@@ -10,15 +10,15 @@
     <nav class="navegacao">
             <div class="container-menu">
                 <div class="logo">Rail<span>Pulse</span></div>
-                <div class="paginas"><a href="../public/dashboard.html" >PAINEL</a></div>
-                <div class="paginas"><a href="../public/sensores.html" class="active">SENSORES</a></div>
-                <div class="paginas"><a href="../public/trens.html">TRENS</a></div>
-                <div class="paginas"><a href="../public/rotas.html">ROTAS</a></div>
-                <div class="paginas"><a href="../public/relatorios.html">RELATÓRIOS</a></div>
-                <div class="paginas" id="menu-usuarios"><a href="../public/usuarios.html" >USUÁRIOS</a></div>
+                <div class="paginas"><a href="../public/dashboard.php" >PAINEL</a></div>
+                <div class="paginas"><a href="../public/sensores.php" class="active">SENSORES</a></div>
+                <div class="paginas"><a href="../public/trens.php">TRENS</a></div>
+                <div class="paginas"><a href="../public/rotas.php">ROTAS</a></div>
+                <div class="paginas"><a href="../public/relatorios.php">RELATÓRIOS</a></div>
+                <div class="paginas" id="menu-usuarios"><a href="../public/usuarios.php" >USUÁRIOS</a></div>
                 <div class="topbar-info">
                     <span id="info-matricula" class="topbar-matricula"></span>
-                    <a href="../index.html" class="paginas">SAIR</a>
+                    <a href="../index.php" class="paginas">SAIR</a>
                 </div>
 
             </div>

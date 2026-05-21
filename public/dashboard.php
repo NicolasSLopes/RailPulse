@@ -12,15 +12,15 @@
     <nav class="navegacao">
         <div class="container-menu">
             <div class="logo">Rail<span>Pulse</span></div>
-            <div class="paginas"><a href="dashboard.html" class="active">PAINEL</a></div>
-            <div class="paginas"><a href="sensores.html">SENSORES</a></div>
-            <div class="paginas"><a href="trens.html">TRENS</a></div>
-            <div class="paginas"><a href="rotas.html">ROTAS</a></div>
-            <div class="paginas"><a href=".relatorios.html">RELATÓRIOS</a></div>
-            <div class="paginas" id="menu-usuarios"><a href="usuarios.html">USUÁRIOS</a></div>
+            <div class="paginas"><a href="dashboard.php" class="active">PAINEL</a></div>
+            <div class="paginas"><a href="sensores.php">SENSORES</a></div>
+            <div class="paginas"><a href="trens.php">TRENS</a></div>
+            <div class="paginas"><a href="rotas.php">ROTAS</a></div>
+            <div class="paginas"><a href=".relatorios.php">RELATÓRIOS</a></div>
+            <div class="paginas" id="menu-usuarios"><a href="usuarios.php">USUÁRIOS</a></div>
             <div class="topbar-info">
                 <span id="info-matricula" class="topbar-matricula"></span>
-                <a href="../index.html" class="paginas">SAIR</a>
+                <a href="../index.php" class="paginas">SAIR</a>
             </div>
 
         </div>
