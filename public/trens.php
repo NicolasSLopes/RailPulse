@@ -18,7 +18,7 @@
                 <div class="paginas" id="menu-usuarios"><a href="../public/usuarios.html" >USUÁRIOS</a></div>
                 <div class="topbar-info">
                     <span id="info-matricula" class="topbar-matricula"></span>
-                    <a href="../index.html" class="paginas">SAIR</a>
+                    <a href="../index.php" class="paginas">SAIR</a>
                 </div>
 
             </div>

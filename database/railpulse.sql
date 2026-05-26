@@ -1,5 +1,4 @@
 -- RailPulse — Script completo do banco de dados
--- ATENÇÃO: Execute na ordem correta (rotas → trens → sensores)
 
 CREATE DATABASE IF NOT EXISTS railpulse
     CHARACTER SET utf8mb4
@@ -93,7 +92,7 @@ INSERT INTO rotas (nome, origem, destino, distancia_km) VALUES
 ('Rota Vale do Itajaí',   'Blumenau',   'Itajaí',         65.00),
 ('Rota Norte',            'Joinville',  'Curitiba',       120.80);
 
--- 2. Trens (referencia rotas já inseridas)
+-- 2. Trens (referencia rotas)
 INSERT INTO trens (nome, modelo, status_operacional, velocidade_atual, latitude, longitude, id_rota) VALUES
 ('Locomotiva Alpha', 'SD70ACe',  'normal',  85.50, -26.3044, -48.8487, 1),
 ('Locomotiva Beta',  'AC44i',    'alerta',  45.20, -26.2740, -48.6830, 1),
