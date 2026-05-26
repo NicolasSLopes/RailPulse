@@ -18,6 +18,7 @@
                 <div class="paginas"><a href="trens.php">TRENS</a></div>
                 <div class="paginas"><a href="rotas.php">ROTAS</a></div>
                 <div class="paginas"><a href="relatorios.php">RELATÓRIOS</a></div>
+                <div class="paginas"><a href="usuarios.php" class="active">USUÁRIOS</a></div>
                 <div class="topbar-info">
                     <span id="info-matricula" class="topbar-matricula"></span>
                     <a href="../index.php" class="paginas">SAIR</a>

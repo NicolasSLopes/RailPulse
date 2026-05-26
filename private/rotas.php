@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trens</title>
+    <title>Rotas</title>
     <link rel="stylesheet" href="../assets/style/dashboard.css">
 </head>
 <body>
@@ -12,9 +12,10 @@
                 <div class="logo">Rail<span>Pulse</span></div>
                 <div class="paginas"><a href="../public/dashboard.html" >PAINEL</a></div>
                 <div class="paginas"><a href="../public/sensores.html">SENSORES</a></div>
-                <div class="paginas"><a href="../public/trens.html" class="active">TRENS</a></div>
-                <div class="paginas"><a href="../public/rotas.html">ROTAS</a></div>
+                <div class="paginas"><a href="../public/trens.html">TRENS</a></div>
+                <div class="paginas"><a href="../public/rotas.html" class="active">ROTAS</a></div>
                 <div class="paginas"><a href="../public/relatorios.html">RELATÓRIOS</a></div>
+                <div class="paginas"><a href="../public/usuarios.html" >USUÁRIOS</a></div>
                 <div class="topbar-info">
                     <span id="info-matricula" class="topbar-matricula"></span>
                     <a href="../index.php" class="paginas">SAIR</a>
