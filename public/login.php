@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - RailPulse</title>
-    <link rel="stylesheet" href="../assets/style/login.css">
+    <link rel="stylesheet" href="../assets/style/style.css">
 </head>
 
-<body>
+<body class="body-login">
         <main>
                     <div class="logo">Rail<span>Pulse</span></div>
         <div class="e-form">
