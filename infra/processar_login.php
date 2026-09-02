@@ -7,25 +7,26 @@ $email_digitado = $_POST['email'];
 $senha_digitada = $_POST['senha'];
 
 $sql = "SELECT * FROM usuarios WHERE email = '$email_digitado'";
+$query = mysqli_query($conexao, $sql);
 
-$query = mysqli_query($mysqli, $sql);
-
-$total_linhas = mysqli_num_rows($query);
-
-if ($total_linhas == 1) {
-    
+# Verifica se retorna linhas por isso == 1, se sim, pega a senha do banco e compara com a digitada
+if (mysqli_num_rows($query) == 1) {
     $usuario = mysqli_fetch_assoc($query);
 
     if ($senha_digitada == $usuario['senha']) {
-        
-        $_SESSION['id'] = $usuario['id'];
+        $_SESSION['id'] = $usuario['id_usuario'];
         $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['cargo'] = $usuario['cargo'];
 
-        
-        //aqui voce coloca a página para onde o usuário será redirecionado após o login bem-sucedido
-
-   
-} else {
-    echo "E-mail não encontrado no nosso sistema.";
+        if ($usuario['cargo'] == 'admin') {
+            header('Location: ../private/dashboard.php');
+        } else {
+            header('Location: ../public/dashboard.php');
+        }
+        exit;
+    }
 }
+
+echo "E-mail ou senha inválidos.";
+
 ?>
