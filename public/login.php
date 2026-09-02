@@ -1,4 +1,5 @@
 <?php
+include '../infra/conexao.php';
 
 ?>
 
@@ -18,7 +19,7 @@
                     <div class="logo">Rail<span>Pulse</span></div>
         <div class="e-form">
             <h2 id="titulo">Login</h2>
-            <form id="form">
+            <form id="form" method="POST">
                 <div id="e-email" class="conjunto">
                     <label for="email">Email:</label>
                     <input type="email" id="email" placeholder="Email" required>
