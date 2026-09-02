@@ -19,14 +19,14 @@ include '../infra/conexao.php';
                     <div class="logo">Rail<span>Pulse</span></div>
         <div class="e-form">
             <h2 id="titulo">Login</h2>
-            <form id="form" method="POST">
+            <form id="form" method="POST" action="../infra/processar_login.php">
                 <div id="e-email" class="conjunto">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
                 </div>
                 <div id="e-senha" class="conjunto">
                     <label for="senha">Senha:</label>
-                    <input type="password" id="senha" placeholder="Senha" required>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
                 </div>
                 <button type="submit" id="botao">Entrar</button>
             </form>
